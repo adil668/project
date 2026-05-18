@@ -1,11 +1,12 @@
-class person:
+class Person:
     def __init__(self, name, age):
         self.name = name
-        self.age = age
+        self.__age = age
 
     def get_age(self):
-        return self.age
+        return self.__age
 
-p1 = person("Adil", 18)
-print(p1.name)
-print(p1.get_age())
+p1 = Person("Adil", 18)
+print(p1.name)  # Output: Adil
+# print(p1.__age)  # This will raise an AttributeError
+print(p1.get_age())  # Output: 18
